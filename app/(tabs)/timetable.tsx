@@ -209,7 +209,7 @@ export default function TimetableScreen() {
               <View key={cls.id} style={{ marginBottom: 12 }}>
                 <TouchableOpacity
                   style={[s.sessionCard, { borderColor: `${color}60`, flexDirection: 'column', alignItems: 'stretch' }]}
-                  onPress={() => router.push(`/course/${cls.courseId}`)}
+                  onPress={() => router.push(cls.teacherId ? `/course/${cls.courseId}?teacherId=${cls.teacherId}` as any : `/course/${cls.courseId}` as any)}
                   activeOpacity={0.85}
                 >
                   <View style={{ flexDirection: 'row', width: '100%', height: 74 }}>

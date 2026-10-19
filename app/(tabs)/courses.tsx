@@ -160,7 +160,7 @@ export default function CoursesScreen() {
                   <Pressable
                     key={teacher.id}
                     style={[s.card, { borderColor: `${course.color}40` }]}
-                    onPress={() => router.push(`/course/${course.id}`)}
+                    onPress={() => router.push(`/course/${course.id}?teacherId=${teacher.id}` as any)}
                   >
                     {/* Top row */}
                     <View style={s.cardTop}>
